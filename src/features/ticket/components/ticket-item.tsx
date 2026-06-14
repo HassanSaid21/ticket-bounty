@@ -26,10 +26,13 @@ function TicketItem({
   isDetail?: boolean;
 }) {
   const detailsButton = (
-    <Button asChild variant="outline" size="icon">
+    <Button asChild variant="outline" size="icon"
+    
+      className=" underline text-black hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
+    >
       <Link
         href={ticketPath(ticket.id)}
-        className=" underline text-black-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
+          aria-label={`View details for ${ticket.title}`}
       >
         <SquareArrowOutUpRight className="h-4 w-4" />
       </Link>
