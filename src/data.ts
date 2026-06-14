@@ -1,26 +1,28 @@
-import { Ticket } from "./types";
+import { Ticket } from "./features/ticket/types";
 
-
-
-export const tickets : Ticket[] = [{
-    id: '1',
+export const tickets: Ticket[] = [
+  {
+    id: "1",
     title: "Fix login bug",
     content: "Users are unable to log in with correct credentials.",
-    status :"OPEN",
-
-} ,
-{
-    id: '2',  
-    title:"master next" ,
-    content:"Master Next.js by building a ticket management app.",
-    status:"DONE",
-
-}
-,
-{    id: '3',  
-    title:"Implement dark mode" ,
-    content:"Add a dark mode toggle to the user interface.",
-    status:"IN_PROGRESS",
-}
-]
-
+    status: "OPEN",
+  },
+  {
+    id: "2",
+    title: "master next",
+    content: "Master Next.js by building a ticket management app.",
+    status: "DONE",
+  },
+  {
+    id: "3",
+    title: "Implement dark mode",
+    content: "Add a dark mode toggle to the user interface. ",
+    status: "IN_PROGRESS",
+  },
+  {
+    id: "4",
+    title: "Optimize database queries",
+    content: "Improve the performance of database queries for faster response times.",
+    status: "IN_PROGRESS",
+  },
+];
