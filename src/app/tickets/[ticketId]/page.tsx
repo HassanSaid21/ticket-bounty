@@ -3,14 +3,15 @@ import Link from "next/link";
 import Placeholder from "@/components/placeholder";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { tickets } from "@/data";
+import TicketItem from "@/features/ticket/components/ticket-item";
 import { ticketsPath } from "@/paths";
 
 type props = {
-  params: Promise<{ ticketId: string }> ;
+  params: Promise<{ ticketId: string }>;
 };
 
 export default async function TicketPage({ params }: props) {
-  const {ticketId}  =  await params
+  const { ticketId } = await params;
   const ticket = tickets.find((ticket) => ticket.id === ticketId);
 
   if (!ticket) {
@@ -32,10 +33,8 @@ export default async function TicketPage({ params }: props) {
   }
 
   return (
-    <div>
-      <h1>{ticket?.title}</h1>
-      <p>{ticket?.content}</p>
-      <p>Status: {ticket?.status}</p>
+    <div className="flex flex-1 flex-col items-center gap-y-4  animate-fade-from-top ">
+      <TicketItem ticket={ticket} isDetail />
     </div>
   );
 }
