@@ -26,6 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
+    suppressHydrationWarning
       lang="en"
       className={cn("font-sans", geist.variable, robotoHeading.variable)}
     >
