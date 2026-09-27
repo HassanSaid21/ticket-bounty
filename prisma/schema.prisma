@@ -3,17 +3,17 @@ generator client {
 }
 
 datasource db {
-  provider  = "postgresql" 
- 
+  provider = "postgresql"
 }
+
 // Define your data models here
-model Ticket  {
-  id String @id @default(uuid())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  title String
-  content String  @db.VarChar(1024)
-  status TicketStatus @default(OPEN)
+model Ticket {
+  id        String       @id @default(uuid())
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+  title     String
+  content   String       @db.VarChar(1024)
+  status    TicketStatus @default(OPEN)
 }
 
 enum TicketStatus {

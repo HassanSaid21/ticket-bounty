@@ -1,15 +1,5 @@
-import "dotenv/config";
+import {prisma } from "@/lib/prisma";
 
-import { PrismaPg } from "@prisma/adapter-pg";
-import { PrismaClient } from "@prisma/client";
-
-const adapter = new PrismaPg({
-  connectionString: process.env.DIRECT_URL!,
-});
-
-const prisma = new PrismaClient({
-  adapter,
-});
 
 const tickets = [
   {

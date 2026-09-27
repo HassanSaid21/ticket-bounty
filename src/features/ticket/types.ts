@@ -5,5 +5,7 @@ export type Ticket = {
     id: string;
     title: string;
     content: string;
-    status: "OPEN" | "IN_PROGRESS" | "DONE";
+    status: "OPEN" | "IN_PROGRESS" | "CLOSED";
+    createdAt: Date;
+    updatedAt: Date;
 };
