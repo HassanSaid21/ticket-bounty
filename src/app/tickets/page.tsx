@@ -1,9 +1,14 @@
 import Heading from "@/components/heading";
 import { Separator } from "@/components/ui/separator";
-import { tickets } from "@/data";
 import TicketItem from "@/features/ticket/components/ticket-item";
+import { getTickets } from "@/features/ticket/queries/get-tickets";
+  
 
-export default function TicketsPage() {
+// export const revalidate = 30;
+
+export default async function TicketsPage() {
+  const tickets = await getTickets();
+
   return (
     <>
       {" "}
